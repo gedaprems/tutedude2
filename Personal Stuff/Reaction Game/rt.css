@@ -1,6 +1,42 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
 #shape{
     height:150px;
     width: 150px;
     background-color:aqua;
     position: relative;
+    display: none;
+}
+
+h1{
+    font-size: 100px;
+}
+p{
+    font-size: 30px;
+    color: #928E85;
+}
+
+#score{
+    color:blueviolet;
+}
+#start{
+    margin-bottom: 20px;
+    padding: 1%;
+    font-size: 30px;
+    background-color: black;
+    color: #928E85;
+    border-radius: 10px;
+    
+}
+#scoreDisplay{
+    font-size: 100px;
+    color:#f6b3e5;
+    background-color: #20115b;
+}
+
+.container{
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
 }

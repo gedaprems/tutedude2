@@ -1,5 +1,9 @@
 var start = new Date().getTime();
 
+var totalTimeSum = 0;
+var totalBoxes = 10;
+
+
 function randomColor(){
     var alphaList = "0123456789ABCDEF"
     var colorCode = "#";
@@ -27,12 +31,51 @@ function newShape(){
     start = new Date().getTime();
 }
 
-newShape();
+document.getElementById("start").onclick = function(){
+
+    document.getElementById("scoreDisplay").innerHTML = "";
+    totalBoxes = 10;
+    document.getElementById("score").innerHTML = totalBoxes;
+
+    newShape();
+}
+
 
 document.getElementById("shape").onclick = function(){
     document.getElementById("shape").style.display = "none";
     var end = new Date().getTime();
     var totalTime = (end - start)/1000;
-    alert(totalTime);
-    newShape();
+    totalBoxes--;
+
+
+    document.getElementById("score").innerHTML = totalBoxes;  // Setting the total boxes left 
+
+    totalTimeSum+= Math.round((totalTime + Number.EPSILON) *100)/100;  // Sum after clicking
+
+
+    // Updating on the time para : Working..
+    // document.getElementById("time").innerHTML = totalTimeSum;
+    
+    if(totalBoxes == 0){
+        // Changing the start -> restart.
+        document.getElementById("start").innerHTML = "Restart";
+
+        // setting total boxes to 10 and innerHTML of score to 10
+        totalBoxes = 10;
+        document.getElementById("score").innerHTML = totalBoxes;
+
+
+        // Showing total score.
+
+        var displayTime = Math.round(totalTimeSum);
+        
+        document.getElementById("scoreDisplay").innerHTML = "Time Taken : "+ displayTime + " sec";
+
+        // updating time to 0 
+        totalTimeSum = 0;
+        // document.getElementById("time").innerHTML = 0; 
+    }else{
+        newShape();
+    }
+    
 }
