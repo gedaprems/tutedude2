@@ -67,7 +67,8 @@ document.getElementById("shape").onclick = function(){
 
         // Showing total score.
 
-        var displayTime = Math.round(totalTimeSum);
+        var displayTime = totalTimeSum*100000;
+        displayTime = Math.round(displayTime) / 100000;
         
         document.getElementById("scoreDisplay").innerHTML = "Time Taken : "+ displayTime + " sec";
 

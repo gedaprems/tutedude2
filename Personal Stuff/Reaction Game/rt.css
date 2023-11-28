@@ -25,9 +25,11 @@ p{
     padding: 1%;
     font-size: 30px;
     background-color: black;
-    color: #928E85;
+    color: #eee;
     border-radius: 10px;
+    width: 80%;
     
+
 }
 #scoreDisplay{
     font-size: 100px;
