@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <input id="input1" type="text">
+    <button id="button1">Click</button>
+    <p id="para1"></p>
+
+    <script>
+        document.getElementById("button1").onclick = function(){
+            var str = document.getElementById("input1").value;
+            document.getElementById("para1").innerHTML = "Length is "+str.length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleChange</title>
+    <script src="jquery.js"></script>
+    <style>
+        #circle{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle">
+    </div>
+
+    <p class="output"></p>
+
+    <script>
+        $("#circle").click(function(){
+            var color = $("#circle").css("background-color");
+
+            if(color == "rgb(255, 0, 0)"){
+                $("#circle").css("background-color","green");
+            }else{
+                $("#circle").css("background-color","red");
+            }
+        });
+    </script>
+</body>
+</html>
